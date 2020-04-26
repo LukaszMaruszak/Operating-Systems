@@ -1,0 +1,42 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Łukasz Maruszak			           Krakow, 02.04.2019
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+*Zawartosc:
+===========
+
+W katalogu cwiczenie3 znajdują sie 3 programy w jezyku ANSI C:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------------------------------------
+==progA.c Program do obsługi sygnałów z możliwościami: (d) wykonanie operacji domyślnej, (i) ignorowanie  oraz (p) przechwycenie i własna obsługa sygnału
+---------------------------------------------------------------------------
+==progB.c Program uruchamia program "progA.c" poprzez funkcję, exec w procesie potomnym innego procesu i wysyłać do niego sygnały poprzez funkcję, systemową, kill z procesu macierzystego.
+--------------------------------------------------------------------------- 
+==progC.c: Program w procesie macierzystym tworzy proces potomny, a następnie uruchamia w w nim kilka procesow potomnych wykonujacych program do obslugi sygnalow. 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Jak uruchomic powyższe programy:
+===============================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+* Aby uruchomic program nalezy wykonac komende:
+        >>> make runA -> O= (podac operacje (d,i,p)) (spacja) S=(nr_sygnalu) 
+
+
+--------------------------------------------------------------------------
+Inne przydatne polecenia:
+=========================
+
+* Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+ ->  make clean  
+
+* W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+ -> make tar  
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
