@@ -1,0 +1,41 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Łukasz Maruszak			                          Krakow, 14.04.2019
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+>Zawartosc:
+===========
+
+Katalog cwiczenie4 zawiera program w jezyku C, dotyczacy
+Producent–Konsument:  Potoki Nienazwane
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>potoki.c  Program przy pomocy potoków nienazwanych systemu UNIX 
+	   implementuje problem "Producenta i konsumenta”. Producent  	
+	   pobiera "surowiec” z pliku tekstowego i wstawia go jako towar do 
+	   potoku, a Konsument umieszcza pobrany z potoku towar w innym
+	   pliku tekstowym. Po zakończeniu działania programów oba pliki 
+	   tekstowe są identyczne, zostaje to sprawdzone poleceniem "diff -s".
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>Jak uruchomic programy:
+========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+>Aby uruchomic program nalezy wykonac komende:
+        > make runA 
+
+------------------------------------------------------------------------------
+
+* Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+     make clean  
+
+* W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+     make tar  
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
