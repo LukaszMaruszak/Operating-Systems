@@ -1,0 +1,48 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Łukasz Maruszak			                          Krakow, 08.05.2019
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+>Zawartosc:
+===========
+
+Katalog cwiczenie6 zawiera programy w jezyku C, dotyczace
+Wzajemne Wykluczanie dla Procesów: Semafory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>powielacz.c Program do powielania procesów realizujacych wzajemne wykluczanie 
+	     – w oparciu o funkcje fork i exec. Program na początku tworzy 
+	     i inicjuje semafor, a na końcu – kiedy wszystkie procesy potomne 
+	     zakończą swoje działanie usuwają go.
+
+>glowny.c    Program przy pomocy semaforów nazwanych standardu POSIX implementuje
+	     zadanie wzajemnego wykluczania dla procesow. Przy pomocy odpowiednich 
+	     komunikatów wypisywanych przez poszczególne procesy przed, w trakcie 
+	     i po sekcji krytycznej oraz funkcji podającej wartość semafora 
+    	     demonstruje poprawnosc dzilania programu.
+
+>BIBLIOTEKA.h plik nagłowkowy
+>BIBLIOTEKA.c Biblioteka,prostych w uzyciu funkcji do: tworzenia, otwierania,
+	      uzyskiwania wartosci, operowania, zamykania i usuwania semafora.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>Jak uruchomic programy:
+========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+>Aby uruchomic program nalezy wykonac komende:
+        > make run1 PROC=(podaj liczbe procesow) KRYT=(podaj liczbe sekcji krytycznych)
+
+------------------------------------------------------------------------------
+
+* Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+     make clean  
+
+* W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+     make tar  
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
