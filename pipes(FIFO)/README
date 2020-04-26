@@ -1,0 +1,53 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Łukasz Maruszak			                          Krakow, 14.04.2019
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+>Zawartosc:
+===========
+
+Katalog cwiczenie5 zawiera 3 programy w jezyku C, dotyczacy
+Producent–Konsument:  Potoki Nazwane
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>fifo.c   Problem "Producenta i konsumenta” z cwiczenia 4 zaimplementowany za 
+	  pomoca potokow nazwanych. Tworzy potok FIFO z poziomu programu, 
+	  a nastepnie uruchomia procesy Producenta i Konsumenta w tym samym 
+	  programie (wprocesie macierzystym i potomnym).
+
+>konsument.c Program wykonujacy zadanie konsumenta. Konsumentniech umieszcza 
+	     pobrany zpotokutowarwinnym pliku tekstowym.
+
+>producent.c Program wykonujacy zadanie producenta. Producent pobiera "surowiec" 
+	     (np. porcje bajtow) z pliku tekstowego i wstawiago jako 
+	     towar do potoku.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>Jak uruchomic programy:
+========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+a) Potok FIFO jest tworzony z poziomu programu, a następnie uruchomia procesy
+Producenta i Konsumenta w tym samym programie (w procesie macierzystym i potomnym)
+
+>Aby uruchomic program nalezy wykonac komende:
+        > make runA 
+
+(b) Utworzenie potoku FIFO z linii komend oraz uruchomienie Producenta i Konsumenta
+niezaleznie z poziomu powłoki za pomoca polecenia:
+ mkfifo -m 0644 potok
+ xterm -hold -title okno_konsumenta -e ./konsument.x
+ xterm -hold -title onko_producenta -e ./producent.x
+------------------------------------------------------------------------------
+
+* Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+     make clean  
+
+* W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+     make tar  
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
